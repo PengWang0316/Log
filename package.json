@@ -9,6 +9,7 @@
     "unitTestCoverage": "jest --coverage",
     "build": "babel src --out-dir distribution && uglifyjs distribution/log.js -c -m -o distribution/log.js"
   },
+  "main": "./distribution/log.js",
   "author": "Kevin W.",
   "license": "MIT",
   "jest": {
