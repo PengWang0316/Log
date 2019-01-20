@@ -6,7 +6,8 @@
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "unitTest": "jest",
     "unitTestWatch": "jest --watch",
-    "unitTestCoverage": "jest --coverage"
+    "unitTestCoverage": "jest --coverage",
+    "build": "babel src --out-dir distribution && uglifyjs distribution/log.js -c -m -o distribution/log.js"
   },
   "author": "Kevin W.",
   "license": "MIT",
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/PengWang0316/Log#readme",
   "dependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/runtime": "^7.2.0",
@@ -40,6 +42,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.12.3",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "uglify-js": "^3.4.9"
   }
 }
